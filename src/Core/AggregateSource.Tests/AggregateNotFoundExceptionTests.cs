@@ -111,6 +111,7 @@ namespace AggregateSource
                 Is.EqualTo("clrType"));
         }
 
+#if NET45
         [Test]
         public void CanBeSerialized()
         {
@@ -130,6 +131,7 @@ namespace AggregateSource
                 Assert.That(result.InnerException.Message, Is.EqualTo(result.InnerException.Message));
             }
         }
+#endif
 
         //TODO: Test that type could not be resolved upon deserialization.
     }

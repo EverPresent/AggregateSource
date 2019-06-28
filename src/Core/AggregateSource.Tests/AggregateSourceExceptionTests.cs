@@ -43,6 +43,7 @@ namespace AggregateSource
             Assert.That(sut.InnerException, Is.EqualTo(innerException));
         }
 
+#if NET45
         [Test]
         public void CanBeSerialized()
         {
@@ -60,5 +61,6 @@ namespace AggregateSource
                 Assert.That(sut.InnerException.Message, Is.EqualTo(result.InnerException.Message));
             }
         }
+#endif
     }
 }

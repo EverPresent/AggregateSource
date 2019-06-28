@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using AggregateSource.Properties;
+#if NETSTANDARD1_1
+using System.Reflection;
+#endif
 
 namespace AggregateSource
 {
@@ -102,7 +105,11 @@ namespace AggregateSource
         {
             if (_hasValue.Equals(other._hasValue))
             {
+#if NET45
                 if (typeof(IEnumerable).IsAssignableFrom(typeof(T)))
+#elif NETSTANDARD1_1
+                if (typeof(IEnumerable).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()))
+#endif
                 {
                     var enumerable1 = (IEnumerable) _value;
                     var enumerable2 = (IEnumerable) other._value;
@@ -155,7 +162,11 @@ namespace AggregateSource
         /// </returns>
         public override int GetHashCode()
         {
+#if NET45
             if (typeof(IEnumerable).IsAssignableFrom(typeof(T)))
+#elif NETSTANDARD1_1
+            if (typeof(IEnumerable).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()))
+#endif
             {
                 var enumerable = (IEnumerable)_value;
                 if (enumerable != null)

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Globalization;
-using System.Runtime.Serialization;
+#if NET45
+    using System.Runtime.Serialization;
+#endif
 using AggregateSource.Properties;
 
 namespace AggregateSource
@@ -9,7 +11,9 @@ namespace AggregateSource
     /// Exception that tells callers an aggregate was not found.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1032:ImplementStandardExceptionConstructors")]
+#if NET45
     [Serializable]
+#endif
     public class AggregateNotFoundException : AggregateSourceException
     {
         readonly string _identifier;
@@ -66,6 +70,7 @@ namespace AggregateSource
             _clrType = clrType;
         }
 
+#if NET45
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateNotFoundException"/> class.
         /// </summary>
@@ -93,6 +98,7 @@ namespace AggregateSource
             info.AddValue("identifier", _identifier);
             info.AddValue("clrType", _clrType.AssemblyQualifiedName);
         }
+#endif
 
         /// <summary>
         /// Gets the aggregate id.
