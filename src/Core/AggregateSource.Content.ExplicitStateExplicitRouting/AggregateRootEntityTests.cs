@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !NETSTANDARD1_1
+using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 
@@ -471,3 +472,4 @@ namespace AggregateSource
         }
     }
 }
+#endif
