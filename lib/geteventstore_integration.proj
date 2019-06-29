@@ -12,7 +12,7 @@
       FileName="$(MSBuildProjectDirectory)\eventstore_license.txt" />
     <WebDownload 
       Condition="!Exists('$(MSBuildProjectDirectory)\EventStore-OSS-Win-v3.0.1.zip')"
-      FileUri="http://download.geteventstore.com/binaries/EventStore-OSS-Win-v3.0.1.zip" 
+      FileUri="http://eventstore.org/downloads/EventStore-OSS-Win-v3.0.1.zip" 
       FileName="$(MSBuildProjectDirectory)\EventStore-OSS-Win-v3.0.1.zip" />
     <Unzip 
       Condition="!Exists('$(MSBuildProjectDirectory)\eventstore3')"

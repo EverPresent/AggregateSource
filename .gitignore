@@ -117,6 +117,7 @@ DocProject/Help/html
 publish
 
 # Others
+.vs/
 [Bb]in
 [Oo]bj
 sql
