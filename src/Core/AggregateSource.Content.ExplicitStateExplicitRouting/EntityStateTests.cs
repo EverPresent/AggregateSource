@@ -1,4 +1,4 @@
-﻿#if !NETSTANDARD1_1
+﻿#if !NETSTANDARD2_0
 using System;
 using System.Collections.Generic;
 using NUnit.Framework;

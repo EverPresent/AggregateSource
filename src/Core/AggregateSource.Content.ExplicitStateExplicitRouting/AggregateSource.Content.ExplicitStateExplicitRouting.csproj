@@ -1,16 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <!-- net45 and netstandard1.1 are for redistributable binaries. net45 and netcoreapp2.0 are for unit testable binaries -->
-    <!-- For some highly technical reason, unit tests can't be built against .NET Standard, and NUnit doesn't support      -->
-    <!-- netcoreapp1.0, so we'll use netcoreapp2.0 to run unit tests inside the .NET Core runtime                          -->
-    <TargetFrameworks>net45;netstandard1.1;netcoreapp2.0</TargetFrameworks>
+    <!-- For some highly technical reason, unit tests can't be built against .NET Standard.                                -->
+    <TargetFrameworks>net45;netstandard2.0;netcoreapp2.0</TargetFrameworks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\SharedAssemblyInfo.cs" Link="Properties\SharedAssemblyInfo.cs" />
     <Compile Include="..\..\SharedVersionInfo.cs" Link="Properties\SharedVersionInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />

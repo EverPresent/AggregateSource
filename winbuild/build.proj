@@ -23,18 +23,18 @@
 	
 	
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\Core\AggregateSource\AggregateSource.csproj" />
-	<Exec Command="dotnet build -c Release -f netstandard1.1 -o $(MSBuildProjectDirectory)\output\netstandard1.1 $(SourcePath)\Core\AggregateSource\AggregateSource.csproj" />
+	<Exec Command="dotnet build -c Release -f netstandard2.0 -o $(MSBuildProjectDirectory)\output\netstandard2.0 $(SourcePath)\Core\AggregateSource\AggregateSource.csproj" />
 	
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\Core\AggregateSource.Tests\AggregateSource.Tests.csproj" />
 	<Exec Command="dotnet build -c Release -f netcoreapp2.0  -o $(MSBuildProjectDirectory)\output\netcoreapp2.0  $(SourcePath)\Core\AggregateSource.Tests\AggregateSource.Tests.csproj" />
 
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\Core\AggregateSource.Content.ExplicitRouting\AggregateSource.Content.ExplicitRouting.csproj" />
 	<Exec Command="dotnet build -c Release -f netcoreapp2.0  -o $(MSBuildProjectDirectory)\output\netcoreapp2.0  $(SourcePath)\Core\AggregateSource.Content.ExplicitRouting\AggregateSource.Content.ExplicitRouting.csproj" />
-	<Exec Command="dotnet build -c Release -f netstandard1.1 -o $(MSBuildProjectDirectory)\output\netstandard1.1 $(SourcePath)\Core\AggregateSource.Content.ExplicitRouting\AggregateSource.Content.ExplicitRouting.csproj" />
+	<Exec Command="dotnet build -c Release -f netstandard2.0 -o $(MSBuildProjectDirectory)\output\netstandard2.0 $(SourcePath)\Core\AggregateSource.Content.ExplicitRouting\AggregateSource.Content.ExplicitRouting.csproj" />
 	
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\Core\AggregateSource.Content.ExplicitStateExplicitRouting\AggregateSource.Content.ExplicitStateExplicitRouting.csproj" />
 	<Exec Command="dotnet build -c Release -f netcoreapp2.0  -o $(MSBuildProjectDirectory)\output\netcoreapp2.0  $(SourcePath)\Core\AggregateSource.Content.ExplicitStateExplicitRouting\AggregateSource.Content.ExplicitStateExplicitRouting.csproj" />
-	<Exec Command="dotnet build -c Release -f netstandard1.1 -o $(MSBuildProjectDirectory)\output\netstandard1.1 $(SourcePath)\Core\AggregateSource.Content.ExplicitStateExplicitRouting\AggregateSource.Content.ExplicitStateExplicitRouting.csproj" />
+	<Exec Command="dotnet build -c Release -f netstandard2.0 -o $(MSBuildProjectDirectory)\output\netstandard2.0 $(SourcePath)\Core\AggregateSource.Content.ExplicitStateExplicitRouting\AggregateSource.Content.ExplicitStateExplicitRouting.csproj" />
 	
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\NEventStore\AggregateSource.NEventStore\AggregateSource.NEventStore.csproj" />
 	<Exec Command="dotnet build -c Release -f netstandard2.0 -o $(MSBuildProjectDirectory)\output\netstandard2.0 $(SourcePath)\NEventStore\AggregateSource.NEventStore\AggregateSource.NEventStore.csproj" />

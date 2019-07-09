@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using AggregateSource.Properties;
-#if NETSTANDARD1_1
+#if NETSTANDARD2_0
 using System.Reflection;
 #endif
 
@@ -107,7 +107,7 @@ namespace AggregateSource
             {
 #if NET45
                 if (typeof(IEnumerable).IsAssignableFrom(typeof(T)))
-#elif NETSTANDARD1_1
+#elif NETSTANDARD2_0
                 if (typeof(IEnumerable).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()))
 #endif
                 {
@@ -164,7 +164,7 @@ namespace AggregateSource
         {
 #if NET45
             if (typeof(IEnumerable).IsAssignableFrom(typeof(T)))
-#elif NETSTANDARD1_1
+#elif NETSTANDARD2_0
             if (typeof(IEnumerable).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()))
 #endif
             {

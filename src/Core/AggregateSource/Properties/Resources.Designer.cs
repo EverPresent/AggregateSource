@@ -10,7 +10,7 @@
 
 namespace AggregateSource.Properties {
     using System;
-#if NETSTANDARD1_1
+#if NETSTANDARD2_0
     using System.Reflection;
 #endif
 
@@ -43,7 +43,7 @@ namespace AggregateSource.Properties {
                 if (object.ReferenceEquals(resourceMan, null)) {
 #if NET45
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AggregateSource.Properties.Resources", typeof(Resources).Assembly);
-#elif NETSTANDARD1_1
+#elif NETSTANDARD2_0
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AggregateSource.Properties.Resources", typeof(Resources).GetTypeInfo().Assembly);
 #endif
 
