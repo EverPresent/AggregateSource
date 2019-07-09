@@ -26,7 +26,7 @@
 
     <NUnit3
         Assemblies="@(AssembliesToTest)"
-        ToolPath="$(PackagesPath)\NUnit.ConsoleRunner.3.5.0\tools"
+        ToolPath="$(PackagesPath)\NUnit.ConsoleRunner.3.10.0\tools"
         Force32Bit="true"
         ContinueOnError="false"
         Framework="4.0"

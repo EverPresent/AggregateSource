@@ -31,6 +31,9 @@ using this tokenized nuspec file.
     <file src="..\output\net45\AggregateSource.dll" target="lib\net45\AggregateSource.dll" />
     <file src="..\output\net45\AggregateSource.pdb" target="lib\net45\AggregateSource.pdb" />
     <file src="..\output\net45\AggregateSource.xml" target="lib\net45\AggregateSource.xml" />
+	  <file src="..\output\netstandard1.1\AggregateSource.dll" target="lib\netstandard1.1\AggregateSource.dll" />
+    <file src="..\output\netstandard1.1\AggregateSource.pdb" target="lib\netstandard1.1\AggregateSource.pdb" />
+    <file src="..\output\netstandard1.1\AggregateSource.xml" target="lib\netstandard1.1\AggregateSource.xml" />
     <file src="..\..\src\Core\AggregateSource\*.cs" target="src\AggregateSource" />
     <file src="..\..\src\Core\AggregateSource\Properties\*.cs" target="src\AggregateSource\Properties" />
   </files>
