@@ -39,6 +39,9 @@
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\NEventStore\AggregateSource.NEventStore\AggregateSource.NEventStore.csproj" />
 	<Exec Command="dotnet build -c Release -f netstandard2.0 -o $(MSBuildProjectDirectory)\output\netstandard2.0 $(SourcePath)\NEventStore\AggregateSource.NEventStore\AggregateSource.NEventStore.csproj" />
 
+	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\NEventStore\AggregateSource.NEventStore.Tests\AggregateSource.NEventStore.Tests.csproj" />
+	<Exec Command="dotnet build -c Release -f netcoreapp2.0  -o $(MSBuildProjectDirectory)\output\netcoreapp2.0  $(SourcePath)\NEventStore\AggregateSource.NEventStore.Tests\AggregateSource.NEventStore.Tests.csproj" />
+
 	<!-- Even though these have not been ported to .NET Core, they still have to be built by `dotnet` because they are referencing the AggregateSource.csproj file, which is now in the new core format. -->
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\Testing\AggregateSource.Testing\AggregateSource.Testing.csproj" />
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\Testing\AggregateSource.Testing.Tests\AggregateSource.Testing.Tests.csproj" />
@@ -46,7 +49,6 @@
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\Testing\AggregateSource.Testing.Xunit\AggregateSource.Testing.Xunit.csproj" />
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\EventStore\AggregateSource.EventStore.Tests\AggregateSource.EventStore.Tests.csproj" />
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\EventStore\AggregateSource.EventStore.IntegratedTests\AggregateSource.EventStore.IntegratedTests.csproj" />
-	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\NEventStore\AggregateSource.NEventStore.Tests\AggregateSource.NEventStore.Tests.csproj" />
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\SampleSource\SampleSource.csproj" />
 	<Exec Command="dotnet build -c Release -f net45          -o $(MSBuildProjectDirectory)\output\net45          $(SourcePath)\EventStore\AggregateSource.EventStore\AggregateSource.EventStore.csproj" />
 		
