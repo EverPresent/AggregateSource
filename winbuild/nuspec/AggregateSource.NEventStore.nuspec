@@ -31,12 +31,19 @@ using this tokenized nuspec file.
         <dependency id="AggregateSource" version="0.0.329" />
         <dependency id="NEventStore" version="5.2.0" />
       </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="AggregateSource" version="0.0.329" />
+        <dependency id="NEventStore" version="6.0.0" />
+      </group>
     </dependencies>
   </metadata>
   <files>
     <file src="..\output\net45\AggregateSource.NEventStore.dll" target="lib\net45\AggregateSource.NEventStore.dll" />
     <file src="..\output\net45\AggregateSource.NEventStore.pdb" target="lib\net45\AggregateSource.NEventStore.pdb" />
     <file src="..\output\net45\AggregateSource.NEventStore.xml" target="lib\net45\AggregateSource.NEventStore.xml" />
+    <file src="..\output\netstandard2.0\AggregateSource.NEventStore.dll" target="lib\netstandard2.0\AggregateSource.NEventStore.dll" />
+    <file src="..\output\netstandard2.0\AggregateSource.NEventStore.pdb" target="lib\netstandard2.0\AggregateSource.NEventStore.pdb" />
+    <file src="..\output\netstandard2.0\AggregateSource.NEventStore.xml" target="lib\netstandard2.0\AggregateSource.NEventStore.xml" />
     <file src="..\..\src\NEventStore\AggregateSource.NEventStore\*.cs" target="src\AggregateSource.NEventStore" />
     <file src="..\..\src\NEventStore\AggregateSource.NEventStore\Snapshots\*.cs" target="src\AggregateSource.NEventStore\Snapshots" />
     <file src="..\..\src\NEventStore\AggregateSource.NEventStore\Properties\*.cs" target="src\AggregateSource.NEventStore\Properties" />
